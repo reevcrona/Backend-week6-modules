@@ -1,7 +1,10 @@
 export const reverseString = (input: string): string => {
   return input.split("").reverse().join("");
 };
-export const countCharacters = (input: string): number => input.length;
+export const countCharacters = (input: string): number => {
+  const removedSpacesString = input.replace(/\s+/g, "");
+  return removedSpacesString.length;
+};
 
 export const upperLower = (input: string): string => {
   let newString: string = "";

@@ -6,10 +6,13 @@ import {
 import path from "path";
 import fs from "fs/promises";
 import { fileURLToPath } from "url";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const sentence = "Node is good for everything :)";
 
+const sentence = "Node is good for everything :)";
+console.log(countCharacters(sentence));
+console.log(upperLower(sentence));
 const reversedSentence = reverseString(sentence);
 
 const saveToFile = async (fileName: string, data: string): Promise<void> => {
